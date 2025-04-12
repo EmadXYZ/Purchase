@@ -1,0 +1,246 @@
+{
+	"compiler": {
+		"version": "0.8.24+commit.e11b9ed9"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32[]",
+						"name": "proposalNames",
+						"type": "bytes32[]"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "chairperson",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					}
+				],
+				"name": "delegate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "voter",
+						"type": "address"
+					}
+				],
+				"name": "giveRightToVote",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "proposals",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "name",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "voteCount",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "proposal",
+						"type": "uint256"
+					}
+				],
+				"name": "vote",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "voters",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "weight",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "voted",
+						"type": "bool"
+					},
+					{
+						"internalType": "address",
+						"name": "delegate",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "vote",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "winnerName",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "winnerName_",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "winningProposal",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "winningProposal_",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "This contract allows users to vote directly or delegate their votes.",
+			"kind": "dev",
+			"methods": {
+				"constructor": {
+					"params": {
+						"proposalNames": "List of proposal names"
+					}
+				},
+				"delegate(address)": {
+					"params": {
+						"to": "Address of the delegate"
+					}
+				},
+				"giveRightToVote(address)": {
+					"details": "Can only be called by the chairperson",
+					"params": {
+						"voter": "Address of the voter"
+					}
+				},
+				"vote(uint256)": {
+					"params": {
+						"proposal": "Index of the chosen proposal"
+					}
+				},
+				"winnerName()": {
+					"returns": {
+						"winnerName_": "Name of the winning proposal"
+					}
+				},
+				"winningProposal()": {
+					"returns": {
+						"winningProposal_": "Index of the proposal with the highest votes"
+					}
+				}
+			},
+			"title": "Decentralized Voting System with Delegation",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"constructor": {
+					"notice": "Deploys the contract and initializes proposals"
+				},
+				"delegate(address)": {
+					"notice": "Delegates the sender's vote to another voter"
+				},
+				"giveRightToVote(address)": {
+					"notice": "Grants voting rights to an address"
+				},
+				"vote(uint256)": {
+					"notice": "Casts a vote for a proposal"
+				},
+				"winnerName()": {
+					"notice": "Returns the name of the winning proposal"
+				},
+				"winningProposal()": {
+					"notice": "Determines the winning proposal based on vote count"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Voting.sol": "Ballot"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Voting.sol": {
+			"keccak256": "0x0e562883cca64b3b4499ea10c0ab5746e10473240c62e9ca8d58d62207a40375",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://31aca6c4ad00ed3a4da21d0a0cccc156946a2f84d77898127393224d5211cbab",
+				"dweb:/ipfs/QmehkrTTtdG5D5k2BX4eSyYoMPMuRCUg6KirLgKmaEZe84"
+			]
+		}
+	},
+	"version": 1
+}
