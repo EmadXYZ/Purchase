@@ -8,14 +8,14 @@ A **secure**, **transparent**, and **decentralized** escrow contract for facilit
 
 ## 🟢 Live Contract on zkSync
 
-✅ [View on zkSync Explorer]([https://explorer.zksync.io/address/0xYourContractAddress](https://sepolia.explorer.zksync.io/address/0xe76709990f439037e9cb541a81222bB6dAFeED18#contract#contract-info))
+✅ [View on zkSync Explorer](https://sepolia.explorer.zksync.io/address/0xe76709990f439037e9cb541a81222bB6dAFeED18#contract#contract-info)
 
 ---
 
 ## 📦 Overview
 
 - **Language:** Solidity (`^0.8.24`)  
-- **Network:** Ethereum-compatible (zkSync-ready)  
+- **Network:** zkSync Sepolia  
 - **Purpose:** A simple escrow system where the seller and buyer deposit funds, ensuring fairness in delivery-based payments.
 
 ---
@@ -50,4 +50,4 @@ This project is licensed under the **MIT License** – feel free to use, adapt, 
 ## 📥 Clone & Use
 
 ```bash
-git clone https://github.com/YourUsername/Purchase.git
+git clone https://github.com/EmadXYZ/Purchase.git
