@@ -1,0 +1,6 @@
+# Ignore node/prettier configs
+.prettierrc.json
+.states
+
+# Ignore build/output folders
+contracts/artifacts/
